@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from personal_kitchen import views as pk_views
 
 urlpatterns = [
+    url(r'^pk/', pk_views.index),
     url(r'^admin/', admin.site.urls),
 ]
